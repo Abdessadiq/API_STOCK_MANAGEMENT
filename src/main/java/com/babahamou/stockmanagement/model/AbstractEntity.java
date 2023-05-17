@@ -10,7 +10,6 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.Date;
 
 /**
  * La classe abstract pour déclarer les attributs qui sont commun entre les entities = classes
@@ -22,11 +21,11 @@ public class AbstractEntity implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     private Integer id;
     @CreatedDate
     @JsonIgnore
-    @Column(name = "creationdate")
+    @Column(name = "creationdate", nullable = false)
 
     private Instant creationDate;
     @LastModifiedDate
