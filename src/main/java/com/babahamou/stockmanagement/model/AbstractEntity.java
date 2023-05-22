@@ -17,19 +17,18 @@ import java.time.Instant;
 @Getter @Setter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
+
 public class AbstractEntity implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "id")
     private Integer id;
     @CreatedDate
     @JsonIgnore
-    @Column(name = "creationdate", nullable = false)
+    @Column(nullable = false)
 
     private Instant creationDate;
     @LastModifiedDate
     @JsonIgnore
-    @Column(name = "lastupdateddate")
     private Instant lastUpdatedDate;
 }

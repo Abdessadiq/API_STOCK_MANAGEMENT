@@ -1,13 +1,23 @@
 package com.babahamou.stockmanagement.model;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import lombok.*;
 
+import java.time.Instant;
+import java.util.List;
 
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
+@Entity
+@EqualsAndHashCode(callSuper = true)
 public class Vente extends AbstractEntity {
+    private String code;
+    private Instant dateVente;
+    private String commantaire;
+    @OneToMany(mappedBy = "vente")
+    private List<LigneVente> ligneVentes;
+
+
 
 
 }
