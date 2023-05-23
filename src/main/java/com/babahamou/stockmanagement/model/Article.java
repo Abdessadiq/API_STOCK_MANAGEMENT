@@ -10,6 +10,7 @@ import java.math.BigDecimal;
  * La classe D'article..
  */
 @Getter @Setter
+@Builder // permet de créer un builder en utilisant design pattern builder
 @NoArgsConstructor @AllArgsConstructor
 @Entity
 @EqualsAndHashCode(callSuper = true)

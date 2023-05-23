@@ -7,6 +7,7 @@ import java.time.Instant;
 import java.util.List;
 
 @Getter @Setter
+@Builder
 @NoArgsConstructor @AllArgsConstructor
 @Entity
 @EqualsAndHashCode(callSuper = true)
