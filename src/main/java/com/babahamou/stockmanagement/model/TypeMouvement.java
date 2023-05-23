@@ -1,5 +1,5 @@
 package com.babahamou.stockmanagement.model;
 
-public enum typeMouvement {
+public enum TypeMouvement {
     ENTRIE, SORTIE
 }

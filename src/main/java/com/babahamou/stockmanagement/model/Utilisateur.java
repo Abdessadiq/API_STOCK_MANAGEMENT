@@ -13,7 +13,6 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 
 public class Utilisateur extends AbstractEntity {
-
     private String nom;
     private String prenom;
     private Instant dateNaissance;

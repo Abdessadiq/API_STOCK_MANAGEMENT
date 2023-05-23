@@ -6,8 +6,6 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.Instant;
-
-
 @Getter @Setter
 @Builder
 @NoArgsConstructor @AllArgsConstructor
@@ -20,7 +18,6 @@ public class MouvementStock extends AbstractEntity {
     @ManyToOne
     @JoinColumn(name = "article_id")
     private Article article;
-    private  typeMouvement typeMouvement;
-
+    private TypeMouvement typeMouvement;
 
 }
