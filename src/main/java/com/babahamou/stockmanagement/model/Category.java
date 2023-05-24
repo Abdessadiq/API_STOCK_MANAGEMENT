@@ -5,16 +5,13 @@ import lombok.*;
 
 import java.util.List;
 
-
 @Getter @Setter
-@Builder
 @Entity
 @NoArgsConstructor @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 public class Category extends AbstractEntity {
     private String code;
     private String disignation;
-
     @OneToMany(mappedBy = "category")
     private List<Article> articles;
 

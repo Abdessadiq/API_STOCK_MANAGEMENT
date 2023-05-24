@@ -8,9 +8,8 @@ import java.math.BigDecimal;
 
 
 @Getter @Setter
-@Builder
-@NoArgsConstructor @AllArgsConstructor
 @Entity
+@NoArgsConstructor @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 public class LigneVente extends AbstractEntity {
     private BigDecimal quantite;
