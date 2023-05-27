@@ -14,8 +14,13 @@ import java.math.BigDecimal;
 public class LigneVente extends AbstractEntity {
     private BigDecimal quantite;
     private BigDecimal prixUnitaire;
+    private Integer idEntreprise;
     @ManyToOne
     @JoinColumn(name = "vente_id")
     private Vente vente;
+
+    @ManyToOne
+    @JoinColumn(name = "article_id")
+    private Article article;
 
 }

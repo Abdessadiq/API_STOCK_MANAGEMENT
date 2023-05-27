@@ -13,13 +13,16 @@ import java.math.BigDecimal;
 @EqualsAndHashCode(callSuper = true)
 
 public class LigneCmdFournisseur extends AbstractEntity {
+    private BigDecimal quantite;
+    private BigDecimal prixUnitaire;
+    private Integer idEntreprise;
     @ManyToOne
     @JoinColumn(name = "article_id")
     private Article article;
     @ManyToOne
     @JoinColumn(name = "commande_fournisseur_id")
     private CommandeFournisseur commandeFournisseur;
-    private BigDecimal quantite;
-    private BigDecimal prixUnitaire;
+
+
 
 }

@@ -13,6 +13,9 @@ import java.math.BigDecimal;
 @EqualsAndHashCode(callSuper = true)
 
 public class LigneCmdClient extends AbstractEntity {
+    private BigDecimal quantite;
+    private BigDecimal prixUnitaire;
+    private Integer idEntreprise;
 
     @ManyToOne
     @JoinColumn(name = "article_id")
@@ -20,7 +23,6 @@ public class LigneCmdClient extends AbstractEntity {
     @ManyToOne
     @JoinColumn(name = "commande_client_id")
     private CommandeClient commandeClient;
-    private BigDecimal quantite;
-    private BigDecimal prixUnitaire;
+
 
 }

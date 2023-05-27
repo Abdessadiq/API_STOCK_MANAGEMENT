@@ -14,9 +14,11 @@ import java.time.Instant;
 public class MouvementStock extends AbstractEntity {
     private Instant dateMouvement;
     private BigDecimal quantite;
+    private SourceMouvementStock sourceMouvementStock;
+    private Integer idEntreprise;
+
+    private TypeMouvement typeMouvement;
     @ManyToOne
     @JoinColumn(name = "article_id")
     private Article article;
-    private TypeMouvement typeMouvement;
-
 }

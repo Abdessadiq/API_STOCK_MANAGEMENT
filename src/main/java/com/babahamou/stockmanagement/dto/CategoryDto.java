@@ -10,24 +10,27 @@ import java.util.List;
 public class CategoryDto {
     private Integer id;
     private String code;
-    private String disignation;
+    private String designation;
+    private Integer idEntreprise;
+
     @JsonIgnore
     private List<ArticleDto> articles;
 
-    public CategoryDto fromEntity(Category category){
+    public static CategoryDto fromEntity(Category category){
         if (category == null){
             return  null;
             // TODO throw An exeption..
         }
        return CategoryDto.builder()
-               .id(category.getId())
+                .id(category.getId())
                 .code(category.getCode())
-                .disignation(category.getDisignation())
+                .designation(category.getDesignation())
+                .idEntreprise(category.getIdEntreprise())
                 .build();
 
     }
 
-    public Category toEntity(CategoryDto categoryDto){
+    public static Category toEntity(CategoryDto categoryDto){
         if (categoryDto == null){
             return  null;
             // TODO throw An exeption..
@@ -35,7 +38,8 @@ public class CategoryDto {
         Category category = new Category();
         category.setId(categoryDto.getId());
         category.setCode(categoryDto.getCode());
-        category.setDisignation(categoryDto.getDisignation());
+        category.setIdEntreprise((categoryDto.getIdEntreprise()));
+        category.setDesignation(categoryDto.getDesignation());
         return category;
 
     }

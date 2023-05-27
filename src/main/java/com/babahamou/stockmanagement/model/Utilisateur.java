@@ -19,6 +19,7 @@ public class Utilisateur extends AbstractEntity {
     private Adresse adresse;
     private String motDePasse;
     private String mail;
+    private String photo;
     @ManyToOne
     @JoinColumn(name = "entreprise_id")
     private Entreprise entreprise;
