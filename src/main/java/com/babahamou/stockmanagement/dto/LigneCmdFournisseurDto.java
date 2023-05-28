@@ -13,7 +13,7 @@ public class LigneCmdFournisseurDto  {
     private BigDecimal prixUnitaire;
     private Integer idEntreprise;
 
-    public LigneCmdFournisseurDto fromEntity(LigneCmdFournisseur ligneCmdFournisseur){
+    public static LigneCmdFournisseurDto fromEntity(LigneCmdFournisseur ligneCmdFournisseur){
         if (ligneCmdFournisseur == null){
             return null;
         }
@@ -26,7 +26,7 @@ public class LigneCmdFournisseurDto  {
                 .build();
     }
 
-    public LigneCmdFournisseur toEntity(LigneCmdFournisseurDto ligneCmdFournisseurDto){
+    public static LigneCmdFournisseur toEntity(LigneCmdFournisseurDto ligneCmdFournisseurDto){
         if (ligneCmdFournisseurDto == null){
             return null;
         }

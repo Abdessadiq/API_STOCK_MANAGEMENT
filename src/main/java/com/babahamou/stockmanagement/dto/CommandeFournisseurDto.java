@@ -15,7 +15,7 @@ public class CommandeFournisseurDto  {
 
     private List<LigneCmdFournisseurDto> ligneCmdFournisseurs;
 
-    public CommandeFournisseurDto fromEntity(CommandeFournisseur commandeFournisseur){
+    public static CommandeFournisseurDto fromEntity(CommandeFournisseur commandeFournisseur){
         if (commandeFournisseur == null){
             return null;
         }
@@ -28,7 +28,7 @@ public class CommandeFournisseurDto  {
                 .build();
 
     }
-    public CommandeFournisseur toEntity(CommandeFournisseurDto commandeFournisseurDto){
+    public static CommandeFournisseur toEntity(CommandeFournisseurDto commandeFournisseurDto){
         if (commandeFournisseurDto  == null){
             return null;
         }
