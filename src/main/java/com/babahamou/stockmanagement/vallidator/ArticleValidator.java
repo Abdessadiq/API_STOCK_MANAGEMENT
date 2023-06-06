@@ -6,11 +6,16 @@ import org.springframework.util.StringUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArticleVallidator {
+public class ArticleValidator {
 
     public List<String> validate(ArticleDto articleDto){
         List<String> errors = new ArrayList<>();
         if (articleDto == null){
+            errors.add("Veuiller renseinger La designation de l'article");
+            errors.add("Veuiller renseinger Le prix unitaire HT de l'article");
+            errors.add("Veuiller renseinger Le TVA de l'article");
+            errors.add("Veuiller Sélectionner une categorie de l'article");
+            return errors;
 
         }
         if (!StringUtils.hasLength(articleDto.getDesignation())){

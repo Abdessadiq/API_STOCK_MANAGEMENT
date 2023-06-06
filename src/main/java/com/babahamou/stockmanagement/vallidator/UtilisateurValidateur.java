@@ -21,6 +21,7 @@ public class UtilisateurValidateur {
          errors.add("Veuillez Renseigner L'E-Mail de l'Utilisateur");
          errors.add("Veuillez Renseigner Le mot de passe  de l'Utilisateur");
          errors.add("Veuillez Renseigner l'adresse de l'utilisateur");
+         return errors;
 
      }
 
