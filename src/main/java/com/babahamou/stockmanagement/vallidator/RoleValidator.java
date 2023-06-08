@@ -21,7 +21,6 @@ public class RoleValidator {
         if (roleDto.getUtilisateur() == null){
             errors.add("Veuillez Séléctionner l'utilisateur ! ");
         }
-
          return errors;
     }
 }
