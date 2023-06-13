@@ -2,7 +2,9 @@ package com.babahamou.stockmanagement.exception;
 
 public enum ErrorCode {
     ARTICLE_NOT_FOUND(1000),
+    ARTICLE_NOT_VALID(1001),
     CATEGORY_NOT_FOUND(2000),
+    // TODO  complete the rest of Error Codes
     CLEINT_NOT_FOUND(3000),
     COMMANDE_CLIENT_NOT_FOUND(4000),
     COMMANDE_FOURNISSEUR_NOT_FOUND(5000),

@@ -2,6 +2,11 @@ package com.babahamou.stockmanagement.exception;
 
 import lombok.Getter;
 
+/**
+ * L'exception qui va être enlever lorsque on essaie de chercher quelque choses dans la
+ * Base de donnée Mais on le trouve pas ..
+ */
+
 public class EntityNotFoundException extends RuntimeException{
 
     @Getter
